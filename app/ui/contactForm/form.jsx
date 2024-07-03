@@ -28,17 +28,19 @@ export default function ContactForm() {
                 return acc;
             }, {});
             setErrors(errorMessages);
-            setSuccessMessage(""); // Limpiar el mensaje de éxito si hay errores
+            setSuccessMessage("");
         } else {
             setErrors({});
-            setSuccessMessage("Formulario enviado con éxito!"); // Establecer el mensaje de éxito
+            setSuccessMessage("Formulario enviado con éxito!");
 
-            // Mostrar la alerta y recargar la página al hacer clic en "OK"
-            alert("Formulario enviado con éxito!");
-            window.location.reload();
-
-            // Aquí puedes manejar el envío exitoso del formulario, por ejemplo, enviarlo a tu backend
-            console.log('Formulario enviado con éxito:', validationResponse.data);
+            window.alert("Formulario enviado con éxito!");
+            nombreRef.current.value = "";
+            emailRef.current.value = "";
+            mensajeRef.current.value = "";
+            // console.log('Formulario enviado con éxito:', validationResponse.data);
+            setTimeout(() => {
+                setSuccessMessage("");
+            }, 2000)
         }
     };
 
@@ -64,7 +66,7 @@ export default function ContactForm() {
                 </div>
 
                 <button type="submit" className={styles.form__button}>Enviar mensaje</button>
-                {successMessage && <div className={styles.success}>{successMessage}</div>} {/* Mostrar mensaje de éxito */}
+                {successMessage && <div className={styles.success}>{successMessage}</div>}
             </form>
             <Image
                 src="/contactMe.svg"

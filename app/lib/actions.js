@@ -12,7 +12,6 @@ export async function Validation(formData) {
 
     if (credenciales.success) {
         const { nombre, email, mensaje } = credenciales.data;
-        // Aquí puedes agregar validaciones adicionales si es necesario
         console.log("Datos validados correctamente:", { nombre, email, mensaje });
         return { success: true, data: credenciales.data };
     } else {
@@ -20,23 +19,3 @@ export async function Validation(formData) {
         return { success: false, errors: credenciales.error.errors };
     }
 }
-
-
-
-// const FormValidation = (data)=>{
-//     const regex = /^[A-Za-z\u00C0-\u00FFñÑ][A-Za-z\u00C0-\u00FFñÑ\s]*$/u
-//     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-//     const errors = {}
-
-//     if(!regex.test(data.name.trim()) || data.name.legth < 3){
-//         errors.name = "El nombre no debe tener caracteres especiales. Debe ser mas largo que 3 caracteres."
-//     }
-//     if (!emailPattern.test(data.email)) {
-//         errors.email = "El correo ingresado, no es valido. Verifique por favor."
-//     }
-//     if (!data.message.trim()) {
-//         errors.message = "Debe ingresar un mensaje"
-//     }
-//     return errors
-// }
-// export default FormValidation
