@@ -56,6 +56,7 @@ Este proyecto es una prueba técnica que muestra la información de un usuario a
 - **Responsivo**: La aplicación está diseñada para ser completamente responsiva y se adapta a diferentes tamaños de pantalla y dispositivos.
 - **CSS Modules**: Se utilizó CSS Modules para el estilo, lo que asegura que los estilos sean locales y no colisionen con otros estilos en el proyecto.
 - **Animaciones y transiciones**: La interfaz incluye animaciones y transiciones para mejorar la experiencia del usuario y hacerla más atractiva visualmente.
+- **Testing con Jest y Testing Library**: Para garantizar la calidad y el correcto funcionamiento de la aplicación, se implementaron pruebas utilizando Jest y Testing Library.
 
 ## Tecnologías Utilizadas
 
@@ -63,3 +64,5 @@ Este proyecto es una prueba técnica que muestra la información de un usuario a
 - **Next.js**: Framework de React para el desarrollo de aplicaciones web.
 - **CSS Modules**: Técnica de modularización de CSS que ayuda a evitar conflictos de nombres en los estilos.
 - **Zod**: Librería para la validación de datos.
+- **Jest**: Framework de pruebas de JavaScript.
+- **Testing Library**: Herramientas para probar componentes de React.
